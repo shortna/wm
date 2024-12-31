@@ -1,0 +1,25 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Terminus;
+    font-size: 10px;
+}
+
+#workspaces button {
+}
+
+#workspaces button.empty {
+}
+
+#workspaces button.active {
+}
+
+/*
+"mpd"
+"cpu"
+"memory"
+"backlight"
+"hyprland/language"
+"battery"
+"clock"
+"tray"
+*/

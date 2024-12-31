@@ -1,0 +1,75 @@
+{
+  "position": "top",
+    "width": 1920,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["mpd"],
+    "modules-right": ["cpu", "memory", "backlight", "hyprland/language", "battery", "clock", "tray"],
+
+    // Modules configuration
+    "hyprland/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "format": "{name}",
+      "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
+        "urgent": "",
+        "focused": "",
+        "default": ""
+      }
+    },
+
+    "hyprland/language": {
+      "format": "lang: {}",
+      "keyboard-name": "at-translated-set-2-keyboard"
+    },
+
+    "mpd": {
+      "format": "{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+      "format-disconnected": "Disconnected ",
+      "unknown-tag": "N/A",
+      "interval": 2,
+      "tooltip-format": "MPD (connected)",
+      "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    },
+
+    "clock": {
+      "timezone": "Europe/Kyiv",
+      "format": "{:%d\:%m\:%Y}"
+      "tooltip": false
+    },
+
+    "cpu": {
+      "format": "cpu: {usage}%",
+      "tooltip": false
+    },
+
+    "memory": {
+      "format": "mem: {percentage}%"
+    },
+
+    "backlight": {
+      "device": "amdgpu_bl0",
+      "format": "light: {percent}%",
+    },
+
+    "battery": {
+      "bat": "BAT1"
+      "format": "battery: {capacity}%",
+    },
+}
+
