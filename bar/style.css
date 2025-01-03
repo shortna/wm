@@ -1,25 +1,30 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Terminus;
-    font-size: 10px;
+  font-family: "GohuFont";
+  font-weight: bold;
+  font-size: 11pt;
+  color: #eff1f5;
+  border-radius: 10px;
 }
 
-#workspaces button {
+window#waybar {
+  all:unset;
 }
 
-#workspaces button.empty {
+.modules-left, 
+.modules-center, 
+.modules-right {
+  background: #4c4f69;
+}
+
+.modules-center,
+.modules-right {
+  padding: 0px 5px 0px 5px;
 }
 
 #workspaces button.active {
+  background-color: #7287fd;
 }
 
-/*
-"mpd"
-"cpu"
-"memory"
-"backlight"
-"hyprland/language"
-"battery"
-"clock"
-"tray"
-*/
+#custom-arrow {
+  color:  #7287fd;
+}

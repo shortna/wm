@@ -1,12 +1,30 @@
 {
-  "position": "top",
-    "width": 1920,
+  "reload_style_on_change": true,
+    "position": "top",
+    "width": 1900,
     "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["mpd"],
-    "modules-right": ["cpu", "memory", "backlight", "hyprland/language", "battery", "clock", "tray"],
+    "fixed-center": false,
 
-    // Modules configuration
+    "modules-right": [
+      "cpu", 
+      "custom/arrow",
+      "memory", 
+      "custom/arrow",
+      "backlight", 
+      "custom/arrow",
+      "hyprland/language", 
+      "custom/arrow",
+      "battery", 
+      "custom/arrow",
+      "clock", 
+      "custom/arrow",
+      "tray"
+    ],
+
+    "margin-top": 5,
+
     "hyprland/workspaces": {
       "disable-scroll": true,
       "all-outputs": true,
@@ -22,9 +40,6 @@
         "8": "8",
         "9": "9",
         "10": "10",
-        "urgent": "",
-        "focused": "",
-        "default": ""
       }
     },
 
@@ -34,32 +49,31 @@
     },
 
     "mpd": {
-      "format": "{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-      "format-disconnected": "Disconnected ",
+      "format": "{title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+      "format-disconnected": "Disconnected",
       "unknown-tag": "N/A",
       "interval": 2,
-      "tooltip-format": "MPD (connected)",
-      "tooltip-format-disconnected": "MPD (disconnected)"
+      "tooltip": false,
     },
 
     "tray": {
       "icon-size": 21,
-      "spacing": 10
+      "spacing": 10,
     },
 
     "clock": {
       "timezone": "Europe/Kyiv",
-      "format": "{:%d\:%m\:%Y}"
-      "tooltip": false
+      "format": "{:%H:%M > %d/%m/%y}",
+      "tooltip": false,
     },
 
     "cpu": {
       "format": "cpu: {usage}%",
-      "tooltip": false
+      "tooltip": false,
     },
 
     "memory": {
-      "format": "mem: {percentage}%"
+      "format": "mem: {percentage}%",
     },
 
     "backlight": {
@@ -68,8 +82,12 @@
     },
 
     "battery": {
-      "bat": "BAT1"
+      "bat": "BAT1",
       "format": "battery: {capacity}%",
     },
-}
 
+    "custom/arrow": {
+      "format": "|",
+      "tooltip": false
+    },
+}
